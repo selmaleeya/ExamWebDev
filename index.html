@@ -1,0 +1,364 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Art</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+    <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Dancing Script', cursive;
+        }
+        body{
+            margin: 0% 0% 0% 0%;
+            padding: 0;
+        }
+        main{
+            margin-top: 60px; 
+        }
+        .header{
+            position: fixed;
+            top : 0;
+            left: 0;
+            right: 0;
+            /* bottom: 0; */
+            height: 60px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 50px gainsboro;
+        }
+        .title{
+            text-align: left;
+            position: absolute;
+            left: 0;
+            padding: 0;
+            margin: 14px 30px 0px;
+            color: rgb(33, 45, 64);
+            font-family: 'Raleway', sans-serif;
+        }
+        nav{
+            position: absolute;
+            right: 0;
+            margin: 14px 30px 0px; 
+        }
+        a{
+            color: rgb(33, 45, 64);
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+        }
+        #jumbotron{
+            width: 100%;
+        }
+        .jumbotron{
+            padding: 20px;
+            /* background-color: white; */
+            text-align: center;
+            /* background-color: rgb(255, 254, 254); */
+            background-image: url('assets/jumbotron-bg.png');
+            background-size:contain;
+            background-repeat: no-repeat;
+        }
+        .header-flex{
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        .jumbotron-title{
+            color: rgb(33, 45, 64);
+            font-size: 30px;
+            padding-bottom: 20px;
+            text-align: left;
+        }
+        .jumbotron-text{
+            color: rgb(33, 45, 64);
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 8px solid rgb(42, 111, 157);
+        }
+        .mini-text{
+            color: rgb(33, 45, 64);
+            text-align: left;
+            margin-right: 5px;
+            font-family: 'Raleway', sans-serif;
+        }
+        .fa-hand-point-up{
+            color: aliceblue;
+            font-size: 20px;
+        }
+        .icon-down{
+            display: none;
+        }
+
+        .fa-hand-point-down{
+            color: aliceblue;
+            font-size: 20px;
+        }
+        button{
+            background-color: rgb(38, 70, 83);
+            border-style: none;
+        }
+        button:hover{
+            cursor: pointer;
+            transform: translateY(5px) ;
+        }
+        .jumbotron-img{
+            /* border: 2px solid rgb(61, 90, 128); */
+            /* border-radius: 30px; */
+            /* padding: 3px; */
+            height: 400px;
+        }
+        .main-content{
+            display: flex;
+            justify-content: flex-start;
+            margin: 20px 20px;
+        }
+        aside{
+            max-width: 15%;
+            max-height: 360px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px gainsboro;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .aside-title{
+            margin-top: 50px;
+            /* font-family: 'Caveat', cursive; */
+            font-size: 25px;    
+        }
+        .profile{
+            border-bottom: 5px solid rgb(38, 70, 83);
+            border-top: 5px solid rgb(38, 70, 83);
+            padding-bottom: 30px;
+            border-radius: 5px;
+        }
+        .profile-picture{
+            border-style: solid;
+            border-radius: 50%;
+            padding: 3px;
+            box-shadow: 0 0 20px gainsboro;
+        }
+        .content{
+            margin-left: 15%;
+            margin-right: 10px;
+            max-width: 60%;
+        }
+        article{
+            max-width: 100%;
+        }
+        .article-title{
+            text-align: center;
+            font-size: 30px;
+            margin: 20px 0 30px;
+        }
+        .project-container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .project{
+            margin: 10px 30px;
+            border-top: 10px solid rgb(42, 111, 157);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px gainsboro;
+        }
+        .project-title{
+            color: rgb(42, 111, 157);;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+        }
+        .project-description{
+            font-family: 'Raleway', sans-serif;
+            font-size: 10pt;
+        }
+        .video-content{    
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 40px gainsboro;
+        }
+        iframe{
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 40px gainsboro;
+        }
+        .audio{
+            position: fixed;
+        }
+        footer{
+            background-color: rgba(186, 204, 212, 0.411);
+        }
+        .center-footer{
+            margin: 0 20px;
+        }
+        .main-footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        .info-top{
+            text-align: center;
+            width: 100%;
+            padding-top: 5px;
+            color: rgb(33, 45, 64);
+        }
+        .info-center{
+            text-align: center;
+            width: 100%;
+            padding-top: 5px;
+            border-top: 1px solid rgb(33, 45, 64);
+            color: rgb(33, 45, 64);
+        }
+        .social-media{
+            display: flex;
+            justify-content: center;
+        }
+        .fa-instagram-square, .fa-twitter-square, .fa-facebook-square, .fa-envelope{
+            padding: 5px;
+            font-size: 30px;
+            color: rgb(33, 45, 64);
+        }
+        .toggle{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        .btn{
+            background-color: transparent;
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h3 class="title">Universal Art</h3>
+            <nav>
+                <a href="">Tutorial</a>
+                <a href="">Contacts</a>
+                <a href="">About</a>
+            </nav>
+        </div>
+    </header>
+      <main>
+        <section id="jumbotron">
+            <div class="jumbotron">
+                
+                <div class="header-flex">
+                    <div>
+                        <h1 class="jumbotron-title">It is important to know <span style="color: rgb(42, 111, 157);">How to Draw</span>, <br> Before you <span style="color: rgb(42, 111, 157);">Start Drawing</span></h1>
+                        <h2 class="jumbotron-text">This blog will show you the fun and easiest way to draw!</h2>
+                        <div class="mini-text-flex">
+                            <p class="mini-text">You are not limited by what you can or can't do. Try it step-by-step, anywhere, anytime, without worries.</p>
+                            <p class="mini-text">Let's start, don't be doubt</p>
+                        </div>                           
+                    </div>
+                    <div>
+                        <img onmouseover="changeImage(this)" onmouseout="changeImageBack(this)" class="jumbotron-img" src="assets/img-header1.png" alt="" width="700" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="main-content">
+            <aside>
+                <div class="profile">
+                    <h3 class="aside-title">Caitlin Halderman</h3>
+                    <img class="profile-picture" src="assets/profile-photo.jpg" alt="Cobee" width="100px" height="auto">
+                    <div class="toggle">
+                        <button class="btn green" id="green">
+                            <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn" id="red">
+                            <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            <div class="content">
+                <article id="my-project"> 
+                    <h3 class="article-title">Project Teaser</h3>
+                    <div class="project-container">
+                        <div class="project">
+                            <img src="assets/drawing1.jpg" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Professional Character</h4>
+                            <p class="project-description">We will learn how to draw a professional character combine with colorful texture using digital art</p>
+                        </div>
+                        <div class="project">
+                            <img src="assets/drawing2.jpg" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Objects</h4>
+                            <p class="project-description">Drawing objects may look easier, but how to make it looks like real?</p>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project">
+                            <img src="assets/drawing3.jpg" alt="" width="340" height="210px">
+                            <h4 class="project-title">Colorful Painting</h4>
+                            <p class="project-description">Not only digital art tutorial, but we also provide watercolor based tutorial</p>
+                        </div>
+                        <div class="project">
+                            <img src="assets/drawing4.jpg" alt="" width="340" height="210px">
+                            <h4 class="project-title">Monocrom Painting</h4>
+                            <p class="project-description">Sometimes it becomes bored to apply so many color. So, let's have a different looks sometimes with black and white</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="video">
+                    <div class="item-video">
+                        <h3 class="article-title">Check This Out!</h3>
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/W7texgGDaRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <h3 class="info-top">Caitlin at Universal Art</h3>
+            <div class="social-media">
+                 <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <p class="info-center">Copyright © 2021. Universal Art. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function changeImage(element){
+            element.setAttribute("src", "assets/img-header2.png")
+        }
+        function changeImageBack(element){
+            element.setAttribute("src", "assets/img-header1.png")
+        }
+        var btnLike = document.querySelector("#green")
+        var btnDislike = document.querySelector("#red")
+        btnLike.onclick = likeColor
+        btnDislike.onclick = dislikeColor
+        function likeColor() {
+            if (btnDislike.classList.contains("red")) {
+                btnDislike.classList.remove("red")
+            }
+            this.classList.toggle("green")
+        }
+        function dislikeColor() {
+            if (btnLike.classList.contains("green")) {
+                btnLike.classList.remove("green")
+            }
+            this.classList.toggle("red")
+        }
+    </script>
+</body>
+</html>
